@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head"></head>
-<body>
+<head th:replace="fragments :: head">
+
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            }
+    </style>
+
+</head>
+<body class="container">
     <h1 th:text="${title}">Default Title</h1>
 
     <nav th:replace="fragments :: navigation"></nav>
 
-    <p th:unless="${cheesesMapList}">No cheese :(</p>
-<!--      and ${cheesesMapList.size()}-->
+    <p th:unless="${cheeses} and ${cheeses.size()}">No cheese :(</p>
 
-    <ul>
-        <li th:each="cheeses : ${cheesesMapList}">
-<!--            <div th:each="cheese : ${cheesesMap}">-->
-                <span th:text="${cheeseMap.key}"></span>:
-                <span th:text="${cheeseMap.value}"></span>
-<!--            </div>-->
-        </li>
-    </ul>
+    <table>
+        <tr>
+            <th style="padding:10px">Name</th>
+            <th style="padding:10px">Description</th>
+<!--            <th>Type</th>-->
+        </tr>
+        <tr th:each="cheese : ${cheeses}"}>
+            <td th:text="${cheese.name}"></td>:
+            <td th:text="${cheese.description}"></td>
+<!--            <td th:text="${cheese.type.name}"></td>-->
+        </tr>
+    </table>
 
-<!--    <th:block th:each="cheese : ${cheesesMap}">-->
-<!--        <tr>-->
-<!--            <td th:text="${cheese.cheeseName}">Cheese</td>-->
-<!--            <td th:text="${cheese.cheeseDescription}">Cheese Description</td>-->
+<!--    <th:block th:each="cheeses : ${cheesesMapList}">-->
+<!--        <tr th:each="cheese : ${cheesesMap}">-->
+<!--            <p th:text="${cheese.key + ': ' + cheese.value}"></p>-->
+<!--            <td th:text="${cheese.key}">Cheese</td>-->
+<!--            <td th:text="${cheese.value}">Description</td>-->
 <!--        </tr>-->
 <!--    </th:block>-->
 

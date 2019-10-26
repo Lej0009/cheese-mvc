@@ -33,24 +33,24 @@ public class Cheese {
         return cheeseId;
     }
 
-    public void setCheeseId(int cheeseId) {
-        this.cheeseId = cheeseId;
+    public void setCheeseId(int aCheeseId) {
+        this.cheeseId = aCheeseId;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String aName) {
+        this.name = aName;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String aDescription) {
+        this.description = aDescription;
     }
 
 //    public CheeseType getType() {

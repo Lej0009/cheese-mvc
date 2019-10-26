@@ -1,33 +1,34 @@
 package org.launchcode.models;
 
+import org.launchcode.models.Cheese;
 import java.util.ArrayList;
 
 public class CheeseData {
 
-    static ArrayList<org.launchcode.models.Cheese> cheeses = new ArrayList<>();
+    static ArrayList<Cheese> cheeses = new ArrayList<>();
 
     // getAll
-    public static ArrayList<org.launchcode.models.Cheese> getAll() {
+    public static ArrayList<Cheese> getAll() {
         return cheeses;
     }
 
     // add
-    public static void add(org.launchcode.models.Cheese newCheese) {
+    public static void add(Cheese newCheese) {
         cheeses.add(newCheese);
     }
 
     // remove
     public static void remove(int id) {
-        org.launchcode.models.Cheese cheeseToRemove = getById(id);
+        Cheese cheeseToRemove = getById(id);
         cheeses.remove(cheeseToRemove);
     }
 
     // getById
-    public static org.launchcode.models.Cheese getById(int id) {
+    public static Cheese getById(int id) {
 
-        org.launchcode.models.Cheese theCheese = null;
+        Cheese theCheese = null;
 
-        for (org.launchcode.models.Cheese candidateCheese : cheeses) {
+        for (Cheese candidateCheese : cheeses) {
             if (candidateCheese.getCheeseId() == id) {
                 theCheese = candidateCheese;
             }

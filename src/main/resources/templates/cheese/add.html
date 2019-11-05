@@ -9,7 +9,7 @@
     <form method="post" th:object="${cheese}">
         <fieldset><br><br>
             <h6>Add a New Cheese!</h6>
-            <div class="form-group col-sm-3 col-form-label">
+            <div class="form-group col-sm-4 col-form-label">
                 <label th:for="name">Names</label>
                 <input type="text" class="form-control" th:field="*{name}" placeholder="Enter cheese name">
                 <span th:errors="*{name}" class="error"></span>

@@ -2,7 +2,6 @@ package org.launchcode.cheesemvc.controllers;
 
 import org.launchcode.models.Cheese;
 import org.launchcode.models.CheeseData;
-import org.launchcode.models.CheeseType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
